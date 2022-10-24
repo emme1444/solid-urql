@@ -7,5 +7,3 @@ I liked the work done over there, but because of their monorepo model, I can not
 Do note that the package in this repository, as supposed to the one over at `FormidableLabs`, has some changes done to it's type exports. Otherwise the code should be pretty much identical.
 
 Do also note that I won't really be keeping this package up to date.
-
-Do also note that I will only build this for esm environments (not cjs).

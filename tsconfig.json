@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "dist",
-    "declaration": true,
+    // NOTE: Generate these using `npm run build-types`
+    // "declaration": true,
     // "types": ["node", "jest"],
     "types": ["node"],
     // "paths": {

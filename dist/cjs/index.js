@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createMutation = exports.createQuery = exports.useClient = exports.Provider = void 0;
+var context_1 = require("./context");
+Object.defineProperty(exports, "Provider", { enumerable: true, get: function () { return context_1.Provider; } });
+Object.defineProperty(exports, "useClient", { enumerable: true, get: function () { return context_1.useClient; } });
+var createQuery_1 = require("./createQuery");
+Object.defineProperty(exports, "createQuery", { enumerable: true, get: function () { return createQuery_1.createQuery; } });
+var createMutation_1 = require("./createMutation");
+Object.defineProperty(exports, "createMutation", { enumerable: true, get: function () { return createMutation_1.createMutation; } });

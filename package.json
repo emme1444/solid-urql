@@ -12,13 +12,14 @@
     "solid"
   ],
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/mjs/index.js",
+  "types": "dist/types/index.d.ts",
   "source": "src/index.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/mjs/index.js",
       "types": "./dist/types/index.d.ts",
       "source": "./src/index.ts"
     },
@@ -29,8 +30,10 @@
     "clean": "rimraf dist",
     "check": "tsc --noEmit",
     "lint": "echo \"Yup that looks good! lol\"",
-    "build": "tsc",
-    "build:watch": "tsc --watch"
+    "build": "run-s build-types build-cjs build-mjs",
+    "build-types": "tsc -d --emitDeclarationOnly --outDir ./dist/types",
+    "build-cjs": "tsc -m commonjs --outDir ./dist/cjs",
+    "build-mjs": "tsc -m es2015 --outDir ./dist/mjs"
   },
   "jest": {
     "preset": "../../scripts/jest/preset"
@@ -46,6 +49,7 @@
   "devDependencies": {
     "@types/node": "^18.11.4",
     "graphql": "^16.0.0",
+    "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "solid-js": "^1.4.4",
     "typescript": "^4.8.4"
