@@ -1,0 +1,37 @@
+{
+  // "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "dist",
+    "declaration": true,
+    // "types": ["node", "jest"],
+    "types": ["node"],
+    // "paths": {
+    //   "urql": ["../../node_modules/urql/src"],
+    //   "*-urql": ["../../node_modules/*-urql/src"],
+    //   "@urql/core/*": ["../../node_modules/@urql/core/src/*"],
+    //   "@urql/*": ["../../node_modules/@urql/*/src"]
+    // }
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    // "noEmit": true,
+    "lib": ["dom", "esnext"],
+    "jsx": "preserve",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "esnext",
+    "strict": true,
+    "noImplicitAny": false,
+    "noUnusedParameters": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "node_modules"
+  ]
+}

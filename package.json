@@ -1,0 +1,53 @@
+{
+  "name": "@urql/solid",
+  "version": "2.0.2",
+  "description": "A highly customizable and versatile GraphQL client for solidjs",
+  "sideEffects": false,
+  "keywords": [
+    "graphql client",
+    "state management",
+    "cache",
+    "formidablelabs",
+    "exchanges",
+    "solid"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts",
+      "source": "./src/index.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist",
+    "check": "tsc --noEmit",
+    "lint": "echo \"Yup that looks good! lol\"",
+    "build": "tsc",
+    "build:watch": "tsc --watch"
+  },
+  "jest": {
+    "preset": "../../scripts/jest/preset"
+  },
+  "peerDependencies": {
+    "graphql": "^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0",
+    "solid-js": "^1.4.4"
+  },
+  "dependencies": {
+    "@urql/core": "^2.5.0",
+    "wonka": "^4.0.14"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.4",
+    "graphql": "^16.0.0",
+    "rimraf": "^3.0.2",
+    "solid-js": "^1.4.4",
+    "typescript": "^4.8.4"
+  }
+}
